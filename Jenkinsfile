@@ -24,7 +24,7 @@ pipeline
        sh 'touch bca.txt'
     }
     }
-    stage ('deploying the code')
+    stage ('deploying the cde')
     {
     steps
     {
