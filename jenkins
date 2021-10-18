@@ -1,0 +1,17 @@
+pipeline{
+    agent any
+    stages{
+        stage ('running parallel branches'){
+            steps {
+                parallel firstBranch: {
+        git branch: 'master', credentialsId:'Gandeep44', url: 'https://github.com/Gandeep44/Gandeep44.git'
+    }, 
+    secondBranch: {
+        git branch: 'how',  credentialsId:'Gandeep44', url: 'https://github.com/Gandeep44/Gandeep44.git'
+    },
+    failFast: true
+            }
+            
+        }
+    }
+}
